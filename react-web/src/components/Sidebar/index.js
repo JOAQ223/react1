@@ -12,27 +12,27 @@ import {
   
 } from  './SidebarElements'
 
-const Sidebar = () => {
+const Sidebar = ({isOpen,toggle}) => {
   return (
-<SidebarContainer>
-<Icon>
+<SidebarContainer isOpen={isOpen} onClick={toggle}>
+<Icon onClick={toggle} > 
     <CloseIcon>
         
     </CloseIcon>
 </Icon>
 <SidebarWraper>
   <SidebarMenu>
-<SidebarLink to='https://stackoverflow.com'>
-About
+<SidebarLink to='about' onClick={toggle} >
+-About
 </SidebarLink>
-<SidebarLink to='https://stackoverflow.com'>
-Discober
+<SidebarLink to='discover' onClick={toggle}>
+-Discober
 </SidebarLink>
-<SidebarLink to='https://stackoverflow.com'>
-  Services
+<SidebarLink to='services' onClick={toggle}>
+  -Services
 </SidebarLink>
-<SidebarLink to='https://stackoverflow.com'>
-singup
+<SidebarLink to='singup' onClick={toggle}>
+-Sing up
 </SidebarLink>
   </SidebarMenu>
   <SideBtnWrap>
